@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <main>
+        <div class="left">
+            <form>
+                <!-- Name , Email , Phone , Github , Linkedin -->
+                <label for="name">Name : </label>
+                <input id="name" type="text" placeholder="name" value=""><br>
+                <label for="email">Email : </label>
+                <input id="email" type="email" placeholder="Email" value=""><br>
+                <label for="phone">Phone : </label>
+                <input id="phone" type="number" placeholder="Phone" value=""><br>
+                <label for="github">Github : </label>
+                <input id="github" type="url" placeholder="Github" value=""><br>
+                <label for="linkedin">Linkedin : </label>
+                <input id="linkedin" type="url" placeholder="Linkedin" value=""><br>
+                
+                <fieldset class="education">
+                    <legend>Education</legend>
+                    <!-- Degree , College , Starting Year , Passing Year , CGPA -->
+                    <label for="degree">Degree : </label>
+                    <input id="degree"type="text" placeholder="Degree" value=""><br>
+                    <label for="college">College : </label>
+                    <input id="college"type="text" placeholder="College" value=""><br>
+                    <label for="startingYear">Starting Year : </label>
+                    <input id="startingYear"type="text" placeholder="Starting-Year" value=""><br>
+                    <label for="passingYear">Passing Year : </label>
+                    <input id="passingYear"type="text" placeholder="Passing-Year" value="" ><br>
+                    <label for="cgpa">CGPA:</label>
+                    <input id="cgpa"type="text" placeholder="CGPA" value=""><br>
+                </fieldset>
+                <fieldset>
+                    <legend>Skills</legend>
+                    <!-- skills -->
+                    <label for="skills">Skills : </label>
+                    <textarea name="skills" id="skills" cols="20" rows="4" placeholder="Skills eg. HTML , CSS" value=""></textarea>
+                </fieldset>
+                <fieldset>
+                    <legend>Projects</legend>
+                    <!-- Project , Description , Link -->
+                    <label for="project">Project : </label>
+                    <input id="project" type="text" placeholder="Project" value=""><br>
+                    <label for="description1">Description : </label>
+                    <textarea name="description1" id="description1" cols="20" rows="4" placeholder="Write in HTML format" value="" class="margin"></textarea><br>
+                    <label for="link">Link : </label>
+                    <input id="link" type="url" placeholder="Link" value="">
+                </fieldset>
+                <fieldset>
+                    <legend>Experience</legend>
+                    <!-- Company , Designation , Duration , Description -->
+                    <label for="company">Company : </label>
+                    <input type="text" placeholder="Company" value="" id="company" style="margin-top: 4px";><br>
+                    <label for="designation">Designation : </label>
+                    <input type="text" placeholder="Designation" value="" id="designation"><br>
+                    <label for="duration">Duration : </label>
+                    <input type="text" placeholder="Duration" value="" id="duration"><br>
+                    <label for="description2">Description : </label>
+                    <textarea name="description2" id="description2" cols="20" rows="4" placeholder="Write in HTML format" value="" class="margin"></textarea>
+                </fieldset>
+                <button type="submit" class="btn">submit</button>
+                <button type="reset" class="btn">reset</button>
+                <button class="btn" onclick="handleLeft()">View & Print</button>
+            </form>
+        </div>
+        <div class="right">
+            <div class="block1">
+                <!-- Name -->
+                <!--Email , Phone , Github , Linkedin  -->
+                <p id="display-name" class="rr"></p>
+                <p class="details">
+                   <a href="" id="display-email" class="deco"></a>|
+                   <a href="" id="display-phone" class="deco"></a>|
+                   <a href="" id="display-github" class="deco"></a>|
+                   <a href="" id="display-linkedin" class="deco"></a>|</p>
+            </div>
+            <div class="block2 margin">
+                <h2>Education</h2>
+                <p id="display-college" class="bold"></p>
+                <p id="display-degree" style="color: black; font-size: 15px; font-weight: bold;"></p>
+                <p id="display-startingYear" class="inputs"></p>
+                <p id="display-passingYear" class="inputs"></p>
+                <p id="display-cgpa" style="display: inline;"></p>
+                
+            </div>
+            <div class="block3 margin">
+                <h2>Skills</h2>
+                <p id="display-skills" class="bold"></p>
+            </div>
+            <div class="block4 margin">
+                <h2>Project</h2>
+                <p id="display-project" class="bold"></p>
+                <p id="display-description1"></p>
+                <p><a href="" id="display-link" class="deco"></a></p>
+            </div>
+            <div class="block5 margin">
+                <h2>Experience</h2>
+                <p id="display-designation" class="bold"></p>
+                <p id="display-company" style="color: darkgray;"</p>
+                <p id="display-duration"></p>
+                <p id="display-description2"></p>
+            </div>
+            <button class="btn print" onclick="handlePrint()">Print</button>
+        </div>
+    </main>
+
+    <script src="./app.js"></script>
+</body>
+</html>
